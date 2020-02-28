@@ -1,4 +1,6 @@
+require_relative('./lib/logic.rb')
 require 'telegram_bot'
+
 token = ''
 bot = TelegramBot.new(token: token)
 
