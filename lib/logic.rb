@@ -1,13 +1,25 @@
 class Myself
-    @about_me = {'age' => '27', 'sex' => 'male', 'country' => 'Zimbabwe'}
+    def self.about_me
+        @about_me = 'age:27 sex:male country:zimbabwe'
+    end
 
-    @skills = %w[html css sass bootstrap ruby rails javascript git rspec]
+    def self.skillz
+        @skill = 'html css sass bootstrap ruby rails javascript git rspec'
+    end
 
-    @education = 'Microverse student'
+    def self.education
+        @education = 'Software Development Microverse'
+    end
 
-    @experience = 'Valuable learning experience from a great instituition'
+    def self.experience
+        @experience = 'Valuable learning experience from a great instituition'
+    end
     
-    @projects = 'A plethora of hands-on projects housed on github. Please look at the contact section'
+    def self.projects
+        @projects = 'A plethora of hands-on projects housed on github. Please look at the contact section'
+    end
 
-    @contact = '{'email' => 'tzvaita@gmail.com', 'twitter' => '@tennyzvaita', 'github' => 'tzvaita'}
+    def self.contact
+        @contact = {'email' => 'tzvaita@gmail.com', 'twitter' => '@tennyzvaita', 'github' => 'tzvaita'}
+    end
 end
