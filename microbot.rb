@@ -2,7 +2,7 @@ require_relative('./lib/logic.rb')
 require 'telegram/bot'
 require 'open-uri'
 
-token = ''
+token = 'token here'
 
 Telegram::Bot::Client.run(token) do |bot|
     bot.listen do |message|
