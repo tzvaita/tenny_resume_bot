@@ -20,6 +20,7 @@ class Myself
     end
 
     def self.contact
-        @contact = {'email' => 'tzvaita@gmail.com', 'twitter' => '@tennyzvaita', 'github' => 'tzvaita'}
+        @contact = 'email: tzvaita@gmail.com twitter: @tennyzvaita github: @tzvaita'
+        
     end
 end

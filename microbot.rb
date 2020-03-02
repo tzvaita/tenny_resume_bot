@@ -1,46 +1,44 @@
 require_relative('./lib/logic.rb')
-require 'telegram_bot'
+require 'telegram/bot'
+require 'open-uri'
 
-token = 'token here'
-bot = TelegramBot.new(token: token)
+token = ''
 
-bot.get_updates(fail_silently: true) do |message|
-
-    puts "@#{message.from.username}: #{message.text}"
-    command = message.get_command_for(bot)
-  
-    message.reply do |reply|
-        case command
-        when /start/i
-            reply.text = "Hello, #{message.from.first_name}, to Tennyson Takudzwa Zvaita info bot. What would you like to know about?
+Telegram::Bot::Client.run(token) do |bot|
+    bot.listen do |message|
+      case message.text
+        when '/start'
+            bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}, to Tennyson Takudzwa Zvaita info bot. What would you like to know about?
             - /aboutme
             - /skills
             - /experience
             - /education
             - /projects
-            - /contact"
-        when /aboutme/i
+            - /contact")
+            
+       when '/aboutme'
             about = Myself.about_me
-            reply.text = about
-        when /skills/i
+            bot.api.send_message(chat_id: message.chat.id, text: about)
+        when '/skills'
             skills = Myself.skillz
-            reply.text = skills
-        when /education/i
+            bot.api.send_message(chat_id: message.chat.id, text: skills)
+        when '/education'
             edu = Myself.education
-            reply.text = edu
-        when /experience/i
+            bot.api.send_message(chat_id: message.chat.id, text: edu)
+        when '/experience'
             exp = Myself.experience
-            reply.text = exp
-        when /projects/i
+            bot.api.send_message(chat_id: message.chat.id, text: exp)
+        when '/projects'
             pro = Myself.projects
-            reply.text = pro
-        when /contact/i
+            bot.api.send_message(chat_id: message.chat.id, text: pro)
+        when '/contact'
             cont = Myself.contact
-            reply.text = cont
+            bot.api.send_message(chat_id: message.chat.id, text: cont)
+        when '/resume'
+            #bot.api.send_photo(chat_id: message.chat.id, photo: Faraday::UploadIO.new('~/Desktop/1564999280.jpeg', 'image/jpeg'))
+            bot.api.send_message(chat_id: message.from.id, text: "<a href=\"https://www.marlowsjewellers.com/wp-content/uploads/2018/04/free-simple-resume-builder-free-basic-resume-examples-resume-builder-samplebusinessresume-in-simple-resume-sample-for-job.jpg\">Resume</a>", parse_mode: "HTML" )
         else
-            reply.text = "I have no idea what #{command.inspect} means. Please check start for available commands."
+            bot.api.send_message(chat_id: message.chat.id, text: "I have no idea what #{command.inspect} means. Please check start for available commands.")
         end
-        puts "sending #{reply.text.inspect} to @#{message.from.username}"
-        reply.send_with(bot)
     end
 end
