@@ -15,10 +15,11 @@ A telegram bot working as a personal resume
 + About the project.
 + Contact.
 
-## Instructions
+## Installation
 
-1. Open a terminal.
-2. Within the terminal, navigate to the game's directory
+1. Click the repository's clone or download button and copy the https link.
+2. Open a terminal on your machine.
+2. Within the terminal, navigate to the directory or make one for the bot files.
 
     **In windows by using:**
     ```
@@ -42,7 +43,9 @@ A telegram bot working as a personal resume
     ```
     To see the available directories and files within the one you're currently at.
 
-3. Install the required gems with bundler. For both operating systems do:
+3. Do git clone (Shift+Ctrl+v) to download the files into the current directory.
+4. Change into the new directory created by the git clone command.
+5. Install the required gems with bundler. For both operating systems do:
     ```
     bundle
     ```
@@ -51,7 +54,7 @@ A telegram bot working as a personal resume
 
 1. Open a terminal.
 
-2. Within the terminal, navigate to the bot's directory
+2. Within the terminal, navigate to the bot's bin directory
 
 ## In windows by using:
 ```
@@ -81,18 +84,18 @@ To see the available directories and files within the one you're currently at.
 
 ## In windows:
 ```
-ruby bot.rb
+ruby microbot.rb
 ```
 
 ## In a unix terminal:
 ```
-ruby bot.rb
+ruby microbot.rb
 ```
 
 Please note that if you close the terminal or shut down the system, the bot will stop working.
 
 Using the bot in Telegram
-The bot has only eight commands
+The bot has only eight commands.
 
 + /start
 + /aboutme
