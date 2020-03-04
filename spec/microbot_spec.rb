@@ -10,35 +10,35 @@ RSpec.describe Myself do
 
   describe '#skillz' do
     it 'returns a string' do
-      myself = Myself.about_me
+      myself = Myself.skillz
       expect(myself).to be_a(String)
     end
   end
 
   describe '#education' do
     it 'returns a string' do
-      myself = Myself.about_me
+      myself = Myself.education
       expect(myself).to be_a(String)
     end
   end
 
   describe '#experience' do
     it 'returns a string' do
-      myself = Myself.about_me
+      myself = Myself.experience
       expect(myself).to be_a(String)
     end
   end
 
   describe '#projects' do
     it 'returns a string' do
-      myself = Myself.about_me
+      myself = Myself.projects
       expect(myself).to be_a(String)
     end
   end
 
   describe '#contact' do
     it 'returns a string' do
-      myself = Myself.about_me
+      myself = Myself.contact
       expect(myself).to be_a(String)
     end
   end
