@@ -16,7 +16,7 @@ Telegram::Bot::Client.run(token) do |bot|
       - /projects
       - /contact")
 
-    when '/about'
+    when '/aboutme'
       about = Myself.about_me
       bot.api.send_message(chat_id: message.chat.id, text: about)
     when '/skills'
