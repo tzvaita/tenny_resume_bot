@@ -94,8 +94,14 @@ ruby microbot.rb
 
 Please note that if you close the terminal or shut down the system, the bot will stop working.
 
-Using the bot in Telegram
-The bot has only eight commands.
+# Using the bot in Telegram
+1. Install telegram on your phone or desktop(Telegram has a full working desktop version which does not require a mobile phone installation.)
+2. Create a personal account.
+3. Once signed in, go to the telegram's searchbar and search for @tennymicro_bot. 
+![Image description](readme_images/Screenshot_20200307_001742.png)
+4. Select the result "micro" shown in the image above.
+
+5. The bot has only eight commands which are:
 
 + /start
 + /aboutme
@@ -106,7 +112,7 @@ The bot has only eight commands.
 + /contact
 + /resume
 
-This starts the bot, which will greet the user by it's name and provide instructions.
+6. To interact with the bot type in a command preceded by a /.This starts the bot, which will greet the user by it's name and provide the available commands.
 
 # About the project
 
